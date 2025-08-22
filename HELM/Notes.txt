@@ -40,7 +40,7 @@ then can create a my-values.yaml file and override one of those values or can ad
 helm install set version=2.0.0
 
 3)Release Management
- Running instance of helm deployment
+ A **release** is a running instance of a Helm chart, just like a container is an instance of an image.
  this is based on its setup
  eg in helm version 2 and 3
  in 2,its comes as helm client and server known as Tiller 
