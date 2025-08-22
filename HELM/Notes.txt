@@ -1,13 +1,41 @@
 Helm is a package manager for Kubernetes.
+Helm package contains resource definitions to run an application,tool, or	service inside of a Kubernetes cluster. 
+streamlines installing and managing Kubernetes applications. 
 
 Features:
 1)Helm Charts
+- Charts	help define,install and upgrade complex kuberetes application.
 - Bundle of YAML files
 - Create your own Helm charts with Helm
-- Push the to Helm repository which can be public or private
-- Download and use existing ones
+- Push the to Helm repository which can be public or private - Helm Hubis a	public repository of charts for popular software
+- Download and use existing ones - 	We can also retrieve charts from third-party repositories, author and contribute our own charts	to someone else’s repository, or run our   own chart repository.
+
 
 Databases like MongoDB,monitoring apps like Prometheus etc have these helm charts installed on them 
+
+--------------------------------------------------------------------------------------
+Helm version
+		-> helm version
+	
+	To find available charts use the search command.
+	
+----------------------------------------------------------------------------------------	
+	helm search hub
+		Searches in https://artifacthub.io/
+		list all helm charts available in that location.
+
+	helm search repo 
+		searches the repositories that you have added to your local helm client
+		
+	helm search --help
+		----------------------------------------------------------------------------------------		
+		
+	#check helm is working
+	helm
+		#this will print lot of information including
+			default configuration path
+			default cache path
+			default data path
 
 2)Templating Engine / Config Values
 
@@ -52,3 +80,38 @@ the way helm client -server setup works is that whenever you create or change th
 Disadvantages
 Tiller has too much power governance inside k8 cluster
 Needs too much permissions and makes it a big security issue and thats y removed tiller part in version 3
+
+ADVANTAGES OF HELM:
+1)Manage Complexity
+Charts describe even the most complex apps, provide repeatable application installation, and serve as a single point of authority.
+
+2)Easy Updates
+Take the pain out of updates with in-place upgrades and custom hooks.
+
+3)Simple Sharing
+Charts are easy to version, share, and host on public or private servers.
+
+4)Rollbacks
+Use helm rollback to roll back to an older version of a release with ease.
+
+
+Use Helm to deploy a chart
+
+Initialize a Helm chart repository $ helm repo add stable https://kubernetes-charts.storage.googleapis.com/
+
+$ helm repo add my-charts https://my-charts.storage.googleapis.com
+$ helm repo update
+$ helm repo list
+$ helm search repo mysql
+$ helm show values stable/mysql
+$ helm install mysqldb stable/mysql
+
+Install it in a Kubernetes namespace
+$ helm install mysqldb --namespace db-system stable/mysql
+
+To pass values
+$ helm install --set user.name='student',user.password='passw0rd' stable/mysql
+$ helm install --values myvalues.yaml stable/mysql
+$ helm upgrade
+$ helm uninstall mysqldb
+
