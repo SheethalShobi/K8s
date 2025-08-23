@@ -93,7 +93,7 @@ helm install set version=2.0.0
 - whenever u run helm client,helm files will sent that to tiller that runs or has to run on k8 cluster
 and tiller then execute this request and create components from this helm files inside the cluster and this feature of helm provides additional value management which is release management
 
-- The way helm client -server setup works is that whenever you create or change the deployment,tiller will store a copy of each configuration clients and for future refeences thus creating a history of chart executions so when u upgrade the helm deployment the changes will be applied to existing deployment instead of removing it and ceating a new one and instead if it the upgrade was wrong then we can rollback that upgrade using :
+- The way helm client -server setup works is that whenever you create or change the deployment,tiller will store a copy of each configuration clients and for future references thus creating a history of chart executions so when u upgrade the helm deployment the changes will be applied to existing deployment instead of removing it and ceating a new one and instead if it the upgrade was wrong then we can rollback that upgrade using :
  ```
 helm rollback <chartname>
 ```
