@@ -11,7 +11,7 @@ Streamlines installing and managing Kubernetes applications.
 - Charts	help define,install and upgrade complex kubernetes application.
 - Bundle of YAML files
 - Create your own Helm charts with Helm
-- Push the to Helm repository which can be public or private - Helm Hubis a	public repository of charts for popular software
+- Push the to Helm repository which can be public or private - Helm Hub is a	public repository of charts for popular software
 - Download and use existing ones - 	We can also retrieve charts from third-party repositories, author and contribute our own charts	to someone else’s repository, or run our   own chart repository.
 
 
