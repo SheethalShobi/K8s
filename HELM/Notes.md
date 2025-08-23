@@ -12,7 +12,7 @@ Streamlines installing and managing Kubernetes applications.
 - Bundle of YAML files
 - Create your own Helm charts with Helm
 - Push the to Helm repository which can be public or private - Helm Hub is a	public repository of charts for popular software
-- Download and use existing ones - 	We can also retrieve charts from third-party repositories, author and contribute our own charts	to someone else’s repository, or run our   own chart repository.
+- Download and use existing ones - 	We can also retrieve charts from third-party repositories, author and contribute our own charts	to someone else’s repository.
 
 
 Databases like MongoDB,monitoring apps like Prometheus etc have these helm charts installed on them 
@@ -26,9 +26,7 @@ Databases like MongoDB,monitoring apps like Prometheus etc have these helm chart
 		$ ./get_helm.sh
 
 --------------------------------------------------------------------------------------
-Helm version
-		-> helm version
-	
+
 	To find available charts use the search command.
 	
 ----------------------------------------------------------------------------------------	
@@ -37,17 +35,16 @@ Helm version
 		list all helm charts available in that location.
 
 	helm search repo 
-		searches the repositories that you have added to your local helm client
+	searches the repositories that you have added to your local helm client
 		
 	helm search --help
-		----------------------------------------------------------------------------------------		
-		
+			
 	#check helm is working
 	helm
-		#this will print lot of information including
-			default configuration path
-			default cache path
-			default data path
+	#this will print lot of information including
+	default configuration path
+	default cache path
+	default data path
 
 #### 2)Templating Engine / Config Values
 
