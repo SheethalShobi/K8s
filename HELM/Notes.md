@@ -48,7 +48,8 @@ Databases like MongoDB,monitoring apps like Prometheus etc have these helm chart
 
 #### 2)Templating Engine / Config Values
 
-Suppose we have multiple microservices and deployment and service of each of those are pretty much the same with only difference in version tags like deployment name,docker img etc then we need to write seperate yaml files for each of these so multiple deplyments where each one has its own appln name and version then with helm we can define a common blueprint for all the microservices and the values that are dynamic ie going to change are replaced by placeholders and that would be a template file where in syntax you have some values that going be taken original value of it from external configurations.
+Suppose we have multiple microservices and deployment and service of each of those are pretty much the same with only difference in version tags like deployment name,docker img etc then we need to write seperate yaml files for each of these so multiple deplOyments where each one has its own appln name and version .
+Then with helm we can define a common blueprint for all the microservices and the values that are dynamic ie going to change are replaced by placeholders and that would be a template file where in syntax you have some values that going to take original value of it from external configurations.
 
 Highly useful in ci/cd pipelines where those template files can be used and replace the values before deploying.
 
@@ -119,21 +120,32 @@ Use helm rollback to roll back to an older version of a release with ease.
 
 ### Use Helm to deploy a chart
 
-Initialize a Helm chart repository $ helm repo add stable https://kubernetes-charts.storage.googleapis.com/
+Initialize a Helm chart repository
+
+$ helm repo add stable https://kubernetes-charts.storage.googleapis.com/
 
 $ helm repo add my-charts https://my-charts.storage.googleapis.com
+
 $ helm repo update
+
 $ helm repo list
+
 $ helm search repo mysql
+
 $ helm show values stable/mysql
+
 $ helm install mysqldb stable/mysql
 
 Install it in a Kubernetes namespace
 $ helm install mysqldb --namespace db-system stable/mysql
 
 To pass values
+
 $ helm install --set user.name='student',user.password='passw0rd' stable/mysql
+
 $ helm install --values myvalues.yaml stable/mysql
+
 $ helm upgrade
+
 $ helm uninstall mysqldb
 
