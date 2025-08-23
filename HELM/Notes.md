@@ -70,6 +70,7 @@ mychart/
 helm install <chartname>
 ```
 template files will be filled with the values from values.yaml file
+
 Optionally other files like Readme or licence files are also present
 
 ### How values are injected into template files ?
