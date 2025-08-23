@@ -1,12 +1,14 @@
 ### HELM
 
 Helm is a package manager for Kubernetes.
-Helm package contains resource definitions to run an application,tool, or	service inside of a Kubernetes cluster. 
-streamlines installing and managing Kubernetes applications. 
+
+Helm package contains resource definitions to run an application,tool, or service inside of a Kubernetes cluster.
+
+Streamlines installing and managing Kubernetes applications. 
 
 ### Features:
 #### 1)Helm Charts
-- Charts	help define,install and upgrade complex kuberetes application.
+- Charts	help define,install and upgrade complex kubernetes application.
 - Bundle of YAML files
 - Create your own Helm charts with Helm
 - Push the to Helm repository which can be public or private - Helm Hubis a	public repository of charts for popular software
