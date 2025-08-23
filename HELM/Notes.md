@@ -104,16 +104,16 @@ Needs too much permissions and makes it a big security issue and thats y removed
 ------------
 
 #### ADVANTAGES OF HELM:
-1)Manage Complexity
+1)Manage Complexity : 
 Charts describe even the most complex apps, provide repeatable application installation, and serve as a single point of authority.
 
-2)Easy Updates
-Take the pain out of updates with in-place upgrades and custom hooks.
+2)Easy Updates :
+Takes the pain out of updates with in-place upgrades and custom hooks.
 
-3)Simple Sharing
+3)Simple Sharing :
 Charts are easy to version, share, and host on public or private servers.
 
-4)Rollbacks
+4)Rollbacks : 
 Use helm rollback to roll back to an older version of a release with ease.
 
 -------------
@@ -121,8 +121,6 @@ Use helm rollback to roll back to an older version of a release with ease.
 ### Use Helm to deploy a chart
 
 Initialize a Helm chart repository
-
-$ helm repo add stable https://kubernetes-charts.storage.googleapis.com/
 
 $ helm repo add my-charts https://my-charts.storage.googleapis.com
 
